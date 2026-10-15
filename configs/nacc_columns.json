@@ -1,0 +1,33 @@
+{
+  "source_freeze": "SET_ME_BEFORE_RUNNING",
+  "clinical": {
+    "participant_id": "NACCID",
+    "site_id": "NACCADC",
+    "visit_date": "VISITDATE",
+    "diagnosis": "NACCUDSD",
+    "alzheimers_etiology": "NACCALZD",
+    "features": ["NACCAGE", "NACCSEX", "EDUC", "CDRGLOB", "CDRSUM", "NACCMMSE"]
+  },
+  "mri": {
+    "participant_id": "NACCID",
+    "site_id": "NACCADC",
+    "year": "MRIYR",
+    "month": "MRIMO",
+    "day": "MRIDY"
+  },
+  "diagnosis_codes": {
+    "mci": 3,
+    "dementia": 4,
+    "alzheimers_etiology": 1
+  },
+  "cohort": {
+    "max_mri_clinical_delta_days": 90,
+    "progression_window_days": 730,
+    "minimum_sequence_visits": 2,
+    "maximum_sequence_visits": 3,
+    "train_fraction": 0.70,
+    "validation_fraction": 0.15,
+    "test_fraction": 0.15,
+    "random_seed": 42
+  }
+}

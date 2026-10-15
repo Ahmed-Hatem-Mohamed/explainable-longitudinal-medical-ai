@@ -1,0 +1,28 @@
+# Restricted NACC inputs and all participant-level outputs must remain local.
+data/restricted/**
+data/processed/**
+data/interim/**
+!data/restricted/.gitkeep
+!data/processed/.gitkeep
+!data/interim/.gitkeep
+
+# Local environment / generated artifacts
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+.env
+.DS_Store
+
+# Defensive patterns for common NACC-derived exports, wherever they are accidentally placed
+**/clinical_selected.csv
+**/mri_selected.csv
+**/cohort_manifest*.csv
+**/visits_clinical*.csv
+**/splits*.json
+**/data_audit_nacc*.json

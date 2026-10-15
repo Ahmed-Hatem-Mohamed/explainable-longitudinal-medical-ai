@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nacc-workstream1"
+version = "0.1.0"
+description = "Configurable, auditable cohort-construction pipeline for longitudinal NACC clinical/MRI data"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "pandas>=2.0,<3.0",
+  "numpy>=1.24,<3.0",
+  "scikit-learn>=1.3,<2.0",
+]
+
+[project.optional-dependencies]
+parquet = ["pyarrow>=14"]
+dev = ["pytest>=7.4", "ruff>=0.4"]
+
+[project.scripts]
+workstream1 = "workstream1.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
