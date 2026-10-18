@@ -1,5 +1,5 @@
 {
-  "source_freeze": "SET_ME_BEFORE_RUNNING",
+  "source_freeze": "NACC Freeze 74 (June 2026)",
   "clinical": {
     "participant_id": "NACCID",
     "site_id": "NACCADC",
@@ -20,6 +20,8 @@
     "dementia": 4,
     "alzheimers_etiology": 1
   },
+  "feature_missing_codes": {},
+  "categorical_features": ["NACCSEX"],
   "cohort": {
     "max_mri_clinical_delta_days": 90,
     "progression_window_days": 730,
